@@ -4,4 +4,4 @@ metadata:
   name: calculator
 data:
   application.properties : |-
-    factor=80
+    factor=100
