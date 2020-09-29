@@ -1,0 +1,5 @@
+namespace: comp2
+bases:
+- ../common
+patchesStrategicMerge:
+- map.yml

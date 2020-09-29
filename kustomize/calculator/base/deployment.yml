@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-deployment
+  labels:
+    app: calculator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calculator
+  template:
+    metadata:
+      labels:
+        app: calculator
+    spec:
+      containers:
+      - name: calculator
+        image: hemant24/quarkus-calculator
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: calculator-volume
+          mountPath: /work/config/
+      volumes:
+      - name: calculator-volume
+        configMap:
+          name: calculator
+
+

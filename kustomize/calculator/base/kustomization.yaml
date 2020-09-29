@@ -1,0 +1,9 @@
+resources:
+- deployment.yml
+- service.yml
+configMapGenerator:
+- files:
+  - application.properties
+  name: calculator 
+generatorOptions:
+  disableNameSuffixHash: true
