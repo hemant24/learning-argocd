@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: calculator
-        image: hemant24/quarkus-calculator
+        image: hemant24/quarkus-calculator:2
         ports:
         - containerPort: 8080
         volumeMounts:
